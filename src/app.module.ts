@@ -11,6 +11,8 @@ import { SecondHouseService } from './second-house/second-house.service';
 import { SecondHouseModule } from './second-house/second-house.module';
 import { DataSource } from 'typeorm';
 import { SecondHouseEntity } from './second-house/entities/second-house.entity';
+import { CommunityModule } from './community/community.module';
+import { Community } from './community/entities/community.entity';
 
 @Dependencies(DataSource)
 @Module({
@@ -22,11 +24,12 @@ import { SecondHouseEntity } from './second-house/entities/second-house.entity';
       username: 'root',
       password: 'DkdR/Ci5&pCV',
       database: 'blog',
-      entities: [Cats, SecondHouseEntity],
+      entities: [Cats, SecondHouseEntity, Community],
       synchronize: true,
     }),
     CatsModule,
     SecondHouseModule,
+    CommunityModule,
   ],
   controllers: [AppController, CatsController, SecondHouseController],
   providers: [AppService, CatsService, SecondHouseService],
