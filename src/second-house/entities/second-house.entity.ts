@@ -1,17 +1,17 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('beike_copy1')
+@Entity('beike')
 export class SecondHouseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: true })
   district_name: string;
 
-  @Column()
+  @Column({ nullable: true })
   quoted_price: number;
 
-  @Column()
+  @Column({ nullable: true })
   beike_price: number;
 
   @Column({ nullable: true })
@@ -26,27 +26,27 @@ export class SecondHouseEntity {
   @Column({ nullable: true })
   showed: number;
 
-  @Column()
+  @Column({ nullable: true })
   total: number;
 
-  @Column()
+  @Column({ nullable: true })
   total_3room: number;
 
-  @Column()
+  @Column({ nullable: true })
   total_2room: number;
 
-  @Column()
+  @Column({ nullable: true })
   total_south: number;
 
-  @Column()
+  @Column({ nullable: true })
   total_subway: number;
 
-  @Column()
+  @Column({ nullable: true })
   total_3room_south_subway: number;
 
-  @Column()
+  @Column({ nullable: true })
   total_3room_south: number;
 
-  @Column()
+  @Column({ nullable: true })
   create_time: Date;
 }
